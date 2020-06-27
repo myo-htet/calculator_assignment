@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log('document_ready');
+
+			 $("#btnsum").on('click',function(){    
+                Sum();    
+            });    
+            $("#btnsub").on('click',function(){    
+                Sub();    
+            });  
+            $("#btnmul").on('click',function(){    
+                Mul();    
+            });   
+            $("#btndiv").on('click',function(){    
+                Div();    
+            });   
+		});
+
+
+
+		  function Sum(){    
+         var no1=parseInt($("#no1").val());    
+         var no2=parseInt($("#no2").val());    
+         var result =no1+no2;    
+          $('#rs').text(result);   
+        }    
+        function Sub(){    
+         var no1=parseInt($("#no1").val());    
+         var no2=parseInt($("#no2").val());    
+         var result =no1-no2;    
+          $('#rs').text(result);    
+        }    
+        function Mul(){    
+         var no1=parseInt($("#no1").val());    
+         var no2=parseInt($("#no2").val());    
+         var result =no1*no2;    
+          $('#rs').text(result);    
+        }    
+        function Div(){    
+         var no1=parseInt($("#no1").val());    
+         var no2=parseInt($("#no2").val());    
+         var result =no1/no2;    
+         $('#rs').text(result);   
+        } 
+
+
+
+	</script>
+
+	<div class="container-fluid">
+		<div class="jumbotron jumbotron-fluid bg-light">
+			<div class="container">
+				<h1 class="display-4">Calculator</h1>
+			</div>
+		</div>
+	</div>
+		<div class="container offset-2">
+			<form>
+				<div class="form-group row">
+					<label for="fname" class="col-md-3">First Number:</label>
+					<div class="col-md-5">
+						<input type="number"  class="form-control" id="no1" placeholder="Enter a number">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="sname" class="col-md-3">Second Number:</label>
+					<div class="col-md-5">
+						<input type="number"  class="form-control" id="no2" placeholder="Enter a number">
+					</div>
+				</div>
+			</form>
+
+				<div class="row">
+						<div class="col-md-2 my-2">			
+							<button class="btn btn-outline-primary btn-block " id="btnsum">+</button>
+						</div>
+						<div class="col-md-2 my-2">			
+							<button class="btn btn-outline-primary btn-block" id="btnsub">-</button>
+						</div>
+						<div class="col-md-2 my-2">			
+							<button class="btn btn-outline-primary btn-block" id="btnmul">*</button>
+						</div>
+
+						<div class="col-md-2 my-2">
+							<button class="btn btn-outline-primary btn-block " id="btndiv">/</button>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<h4>Result is:<span class="text-danger" id="rs"> </span></h4>
+
+					</div>
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+		</body>
+		</html>
